@@ -158,18 +158,20 @@ export function Academy() {
           className="w-full"
           onValueChange={setActiveTab}
         >
-          <TabsList className="w-full flex flex-wrap justify-start h-auto gap-2 bg-transparent p-0 mb-8">
-            {tracks.map((track) => (
-              <TabsTrigger
-                key={track.id}
-                value={track.id}
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-6 py-3 text-base font-medium transition-all"
-              >
-                <track.icon className="w-4 h-4 mr-2" />
-                {track.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <div className="w-full overflow-x-auto scrollbar-hide pb-4 -mb-4">
+            <TabsList className="flex flex-nowrap justify-start h-auto gap-2 bg-transparent p-0 min-w-max mb-8">
+              {tracks.map((track) => (
+                <TabsTrigger
+                  key={track.id}
+                  value={track.id}
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-6 py-3 text-base font-medium transition-all whitespace-nowrap"
+                >
+                  <track.icon className="w-4 h-4 mr-2" />
+                  {track.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
           {tracks.map((track) => (
             <TabsContent
