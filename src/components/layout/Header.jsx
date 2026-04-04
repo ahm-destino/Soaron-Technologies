@@ -19,6 +19,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import logo from "@/src/assets/logo.png";
 
 const services = [
   {
@@ -75,16 +76,16 @@ export function Header() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl group-hover:scale-105 transition-transform">
-              S
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <img src={logo} alt="Soar on Technologies Logo" className="w-full h-full object-contain" />
             </div>
             <span
               className={`font-heading font-bold text-xl tracking-tight ${isScrolled ? "text-foreground" : "text-white"}`}
             >
               Soar on Technologies
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
