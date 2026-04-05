@@ -7,7 +7,7 @@ const testimonials = [
     name: "Aisha Bello",
     role: "CTO, FinTech Solutions",
     content:
-      "Soar on Technologies completely transformed our cloud infrastructure. Their Google Workspace integration was seamless, and their ongoing support is unmatched.",
+      "Soar on Technologies completely transformed our cloud infrastructure. Their enterprise modernization strategy was seamless, and their ongoing support is unmatched.",
     image:
       "https://images.unsplash.com/photo-1531123414780-f74242c2b052?auto=format&fit=crop&q=80&w=200",
     rating: 5,

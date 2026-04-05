@@ -24,7 +24,7 @@ import logo from "@/src/assets/logo.png";
 const services = [
   {
     title: "Corporate Solutions",
-    description: "Google Workspace & Productivity Training",
+    description: "Digital Workplace & Productivity Strategy",
     icon: Briefcase,
     href: "/corporate-solutions",
   },

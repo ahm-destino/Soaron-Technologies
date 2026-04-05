@@ -25,8 +25,8 @@ export function Footer() {
             </a>
             <p className="text-muted-foreground leading-relaxed">
               Empowering businesses and individuals across Africa and the Middle
-              East with comprehensive tech solutions, Google Workspace
-              integration, and Web3 advocacy.
+              East with comprehensive tech solutions, Modern Workplace
+              Strategy, and Web3 advocacy.
             </p>
             <div className="flex gap-4">
               <Button
@@ -68,7 +68,7 @@ export function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Google Workspace
+                  Modern Workplace
                 </a>
               </li>
               <li>

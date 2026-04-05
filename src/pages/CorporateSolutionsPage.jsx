@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const solutions = [
   {
     icon: Cloud,
-    title: "Google Workspace & Infrastructure",
+    title: "Cloud Infrastructure & Productivity",
     description: "Move beyond legacy systems. We help banks and firms transition to cloud-first collaboration platforms that guarantee 99.9% uptime and global accessibility.",
   },
   {

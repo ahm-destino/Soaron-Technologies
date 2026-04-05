@@ -27,7 +27,7 @@ export function CTA() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-primary-foreground/80 mb-8 leading-relaxed"
             >
-              Whether you need enterprise-grade Google Workspace integration,
+              Whether you need enterprise-grade modern cloud systems,
               Web3 advocacy, or want to launch your tech career, we have the
               expertise to guide you.
             </motion.p>

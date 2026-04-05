@@ -21,7 +21,7 @@ const services = [
   {
     title: "Corporate Solutions",
     description:
-      "Modernize your workforce with Google Workspace and data-driven productivity audits tailored for African firms.",
+      "Modernize your workforce with enterprise cloud solutions and data-driven productivity audits tailored for African firms.",
     icon: Briefcase,
     color: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
     link: "/corporate-solutions",

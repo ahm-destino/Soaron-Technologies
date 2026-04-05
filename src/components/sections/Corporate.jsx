@@ -8,7 +8,7 @@ const benefits = [
     icon: Cloud,
     title: "Seamless Migration",
     description:
-      "Zero-downtime transition to Google Workspace with complete data integrity.",
+      "Zero-downtime transition to modern cloud collaboration with complete data integrity.",
   },
   {
     icon: Shield,
@@ -55,7 +55,7 @@ export function Corporate() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl md:text-5xl font-heading font-bold tracking-tight mb-6"
             >
-              Drive Organizational Productivity with Google Workspace
+              Drive Organizational Productivity with Modern Cloud Tools
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export function Corporate() {
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
             >
               We help banks, insurance firms, and large organizations level up their human capital. 
-              Our productivity audits and Google Workspace training ensure your team is efficient, secure, and ready for the digital age.
+              Our productivity audits and digital transformation training ensure your team is efficient, secure, and ready for the digital age.
             </motion.p>
 
             <motion.div

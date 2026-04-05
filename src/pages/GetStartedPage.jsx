@@ -30,7 +30,7 @@ const types = [
 ];
 
 const subOptions = {
-  corporate: ["Google Workspace Integration", "Productivity Training", "Digital Transformation", "Security Compliance"],
+  corporate: ["Enterprise Infrastructure Integration", "Productivity Training", "Digital Transformation", "Security Compliance"],
   student: ["Frontend Development", "Backend Development", "UI/UX Design", "Data Analysis", "Cloud Computing", "Cybersecurity", "Artificial Intelligence"],
   community: ["Ethereum Build Circle", "Filecoin Advocacy", "DeFi Research", "Local Hub Meetup"],
   cert: ["AWS Certification Prep", "CompTIA Security+", "Microsoft Azure", "Google Data Engineer"],

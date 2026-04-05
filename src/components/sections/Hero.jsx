@@ -18,7 +18,7 @@ const slides = [
       "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070",
     title: "Modern Tech Solutions for the African Firm",
     subtitle:
-      "Level up your organization with Google Workspace and data-driven productivity audits.",
+      "Level up your organization with modern cloud productivity and data-driven audits.",
     primaryAction: "Explore Solutions",
     primaryHref: "/corporate-solutions",
     secondaryAction: "Request Audit",

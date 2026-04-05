@@ -13,7 +13,7 @@ const faqs = [
       "Not at all! Our beginner-friendly tracks (like UI/UX and Data Analysis) are designed for absolute beginners. We start from the fundamentals and gradually build up to advanced concepts.",
   },
   {
-    question: "How does the Google Workspace migration process work?",
+    question: "How does the cloud migration process work?",
     answer:
       "Our 'Discover, Strategize, Execute, Empower' methodology ensures a smooth transition. We audit your current setup, plan the migration to minimize downtime, execute the transfer securely, and train your team on the new tools.",
   },
