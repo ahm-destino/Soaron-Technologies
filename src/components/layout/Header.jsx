@@ -24,15 +24,15 @@ import logo from "@/src/assets/logo.png";
 const services = [
   {
     title: "Corporate Solutions",
-    description: "Google Workspace & Cloud Infrastructure",
+    description: "Google Workspace & Productivity Training",
     icon: Briefcase,
-    href: "#corporate",
+    href: "/corporate-solutions",
   },
   {
     title: "Tech Academy",
-    description: "UI/UX, Data, Cloud & Cybersecurity",
+    description: "7 High-Demand IT Professional Tracks",
     icon: GraduationCap,
-    href: "#academy",
+    href: "/academy",
   },
   {
     title: "AI Summer Camp",
@@ -42,15 +42,15 @@ const services = [
   },
   {
     title: "Web3 & Advocacy",
-    description: "Blockchain & Developer Communities",
+    description: "Ethereum, Filecoin & Decentralization",
     icon: Code,
-    href: "#web3",
+    href: "/web3-advocacy",
   },
   {
     title: "Global Certifications",
-    description: "Internationally recognized tech credentials",
+    description: "International tech credentials (AWS, CompTIA)",
     icon: Globe,
-    href: "#certifications",
+    href: "/certifications",
   },
 ];
 
@@ -136,12 +136,12 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a
-                    href="#academy"
+                  <Link
+                    to="/academy"
                     className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:bg-white/10 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${!isScrolled ? "text-white hover:text-white" : "text-foreground hover:bg-accent hover:text-accent-foreground"}`}
                   >
                     Academy
-                  </a>
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <a
@@ -219,13 +219,13 @@ export function Header() {
                 ))}
               </div>
               <div className="h-px bg-border my-2" />
-              <a
-                href="#academy"
+              <Link
+                to="/academy"
                 className="font-medium p-3 hover:bg-accent rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Academy
-              </a>
+              </Link>
               <a
                 href="#about"
                 className="font-medium p-3 hover:bg-accent rounded-lg transition-colors"
