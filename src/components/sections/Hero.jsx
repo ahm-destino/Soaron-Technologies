@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=2070",
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070",
     title: "Modern Tech Solutions for the African Firm",
     subtitle:
       "Level up your organization with Google Workspace and data-driven productivity audits.",
@@ -27,7 +27,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=2072",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=2070",
     title: "7 Tracks to a Global Tech Career",
     subtitle:
       "Join our Tech Academy and master High-demand skills with our industry-led curriculum.",
@@ -39,7 +39,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&q=80&w=2070",
+       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=2074",
     title: "Global Certifications & Web3",
     subtitle:
       "Validate your expertise with AWS, Microsoft, and Google credentials or lead the Web3 decentralization.",

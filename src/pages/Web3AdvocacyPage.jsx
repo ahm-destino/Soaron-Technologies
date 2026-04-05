@@ -79,10 +79,10 @@ export function Web3AdvocacyPage() {
                 We are more than a tech hub; we are a movement. Soar on Technologies bridges the gap between global protocols and local builders in Nigeria.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white px-8 h-12 shadow-lg shadow-primary/20 transition-all hover:scale-105">
+                <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg shadow-lg shadow-primary/20 transition-all hover:scale-105">
                   <Link to="/get-started?type=community">Join the Movement</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 px-8 h-12">
+                <Button variant="outline" size="lg" className="rounded-full border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 h-14 px-10 text-lg">
                    View Initiatives
                 </Button>
               </div>
@@ -163,10 +163,10 @@ export function Web3AdvocacyPage() {
                    <h2 className="text-3xl md:text-6xl font-heading font-bold mb-8">Join the Soar Hub Web3 Community</h2>
                    <p className="text-xl text-white/80 mb-10">Access exclusive developer study groups, grants for early-stage blockchain projects, and networking with global ecosystem leaders.</p>
                    <div className="flex flex-wrap gap-4">
-                      <Button asChild size="lg" variant="secondary" className="rounded-full px-10 h-14 text-primary bg-white hover:bg-slate-100 border-0">
+                      <Button asChild size="lg" variant="secondary" className="rounded-full h-14 px-12 text-lg text-primary bg-white hover:bg-slate-100 border-0 shadow-xl shadow-black/20 font-bold">
                          <Link to="/get-started?type=community">Be an Advocate</Link>
                       </Button>
-                      <Button variant="outline" size="lg" className="rounded-full border-white/40 bg-white/10 text-white hover:bg-white/20 px-10">
+                      <Button variant="outline" size="lg" className="rounded-full border-white/40 bg-white/10 text-white hover:bg-white/20 h-14 px-12 text-lg">
                          View Events Calendar
                       </Button>
                    </div>

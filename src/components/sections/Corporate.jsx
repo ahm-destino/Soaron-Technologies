@@ -97,7 +97,7 @@ export function Corporate() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg shadow-primary/20"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-10 text-lg shadow-lg shadow-primary/20 font-bold"
               >
                 <Link to="/corporate-solutions">Explore Productivity Solutions</Link>
               </Button>
@@ -113,8 +113,8 @@ export function Corporate() {
               className="relative z-10"
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070"
-                alt="Corporate Team Collaboration"
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070"
+                alt="Nigerian Corporate Team Productivity"
                 className="rounded-3xl shadow-2xl border border-border"
                 referrerPolicy="no-referrer"
               />

@@ -141,10 +141,10 @@ export function TechAcademyPage() {
                   Join Africa's most intensive, project-driven academy. We provide the mentorship, the tools, and the path to a high-growth career in tech.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 px-8 py-7 text-lg shadow-xl shadow-black/10">
+                  <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 h-14 px-10 text-lg shadow-xl shadow-black/10">
                     <Link to="/get-started?type=student">Apply Now</Link>
                   </Button>
-                  <Button variant="outline" size="lg" className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-7 text-lg">
+                  <Button variant="outline" size="lg" className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 h-14 px-10 text-lg">
                     View Catalog
                   </Button>
                 </div>
@@ -264,8 +264,8 @@ export function TechAcademyPage() {
               <div className="relative">
                  <div className="aspect-video rounded-3xl bg-muted border border-border overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000" 
-                      alt="Student Collaborative Sessions" 
+                      src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=2000" 
+                      alt="African tech students collaborating" 
                       className="w-full h-full object-cover"
                     />
                  </div>
@@ -292,7 +292,7 @@ export function TechAcademyPage() {
                  <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Ready to go Global?</h2>
                  <p className="text-white/70 text-lg">We offer exam preparation and vouchers for international certifications from AWS, Google, and Microsoft.</p>
               </div>
-              <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 px-10">
+              <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-12 px-10">
                  <Link to="/certifications">View Certifications</Link>
               </Button>
            </div>

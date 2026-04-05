@@ -29,7 +29,7 @@ const tracks = [
     description:
       "Master user research, wireframing, prototyping, and visual design using industry-standard tools like Figma.",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=2000",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070",
     skills: ["Figma", "User Research", "Prototyping", "Design Systems"],
     duration: "12 Weeks",
     level: "Beginner to Advanced",
@@ -41,7 +41,7 @@ const tracks = [
     description:
       "Learn to extract actionable insights from complex datasets using SQL, Python, Excel, and Power BI.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070",
     skills: ["SQL", "Python", "Power BI", "Data Visualization"],
     duration: "16 Weeks",
     level: "Intermediate",
@@ -53,7 +53,7 @@ const tracks = [
     description:
       "Design, deploy, and manage scalable infrastructure on AWS, Google Cloud, and Azure.",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072",
+      "https://images.unsplash.com/photo-1600880210831-20d0f806950e?auto=format&fit=crop&q=80&w=2070",
     skills: ["AWS", "GCP", "Docker", "Kubernetes"],
     duration: "20 Weeks",
     level: "Advanced",
@@ -65,7 +65,7 @@ const tracks = [
     description:
       "Protect digital assets, conduct vulnerability assessments, and master ethical hacking techniques.",
     image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=2071",
     skills: [
       "Network Security",
       "Ethical Hacking",
@@ -82,7 +82,7 @@ const tracks = [
     description:
       "Build intelligent systems using machine learning, deep learning, and natural language processing.",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070",
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=2070",
     skills: ["Machine Learning", "TensorFlow", "NLP", "Computer Vision"],
     duration: "24 Weeks",
     level: "Advanced",
@@ -221,14 +221,14 @@ export function Academy() {
                       <div className="flex flex-col sm:flex-row gap-4 mt-auto">
                         <Button
                           size="lg"
-                          className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                          className="bg-primary hover:bg-primary/90 text-white rounded-full h-12 px-8"
                         >
                           Enroll Now
                         </Button>
                         <Button
                           size="lg"
                           variant="outline"
-                          className="rounded-full"
+                          className="rounded-full h-12 px-8"
                         >
                           Download Syllabus
                         </Button>
@@ -258,7 +258,7 @@ export function Academy() {
            transition={{ duration: 0.5, delay: 0.2 }}
            className="mt-16 flex justify-center"
         >
-           <Button asChild size="lg" className="rounded-full px-12 py-7 text-lg shadow-xl shadow-primary/20">
+           <Button asChild size="lg" className="rounded-full h-14 px-12 text-lg shadow-xl shadow-primary/20 font-bold">
               <Link to="/academy">Explore All 7 Career Tracks</Link>
            </Button>
         </motion.div>

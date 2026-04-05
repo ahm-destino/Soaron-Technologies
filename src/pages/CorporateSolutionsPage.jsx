@@ -83,12 +83,12 @@ export function CorporateSolutionsPage() {
                     Automate manual tasks, empower your human capital, and modernize your infrastructure. We help organizations like banks and insurance firms level up their teams for the digital age.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white px-8">
+                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg shadow-lg shadow-primary/20">
                       <Link to="/get-started?type=corporate">
                         Request a Productivity Audit <ChevronRight className="ml-2 w-4 h-4" />
                       </Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="rounded-full px-8">
+                    <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-primary/20 hover:bg-primary/5">
                       <a href="#solutions">Explore Services</a>
                     </Button>
                   </div>
@@ -102,8 +102,8 @@ export function CorporateSolutionsPage() {
                   className="aspect-square rounded-3xl bg-gradient-to-tr from-primary/20 to-secondary/50 p-6"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000" 
-                    alt="Corporate Team Productivity" 
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070" 
+                    alt="Nigerian Corporate Team productivity" 
                     className="w-full h-full object-cover rounded-2xl shadow-2xl"
                   />
                 </motion.div>
@@ -199,7 +199,7 @@ export function CorporateSolutionsPage() {
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Ready to Level Up Your Team?</h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto mb-12"> Join top organizations using Soar on Technologies to drive digital growth and employee productivity.</p>
             <div className="flex justify-center">
-               <Button asChild size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg bg-white text-primary hover:bg-gray-100 border-0">
+               <Button asChild size="lg" variant="secondary" className="rounded-full h-14 px-12 text-lg bg-white text-primary hover:bg-gray-100 border-0 shadow-xl shadow-black/10">
                   <Link to="/get-started?type=corporate">Work With Us Today</Link>
                </Button>
             </div>

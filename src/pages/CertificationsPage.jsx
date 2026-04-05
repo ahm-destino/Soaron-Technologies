@@ -105,23 +105,17 @@ export function CertificationsPage() {
                     Don't just claim your skills—prove them. Soar on Technologies provides the training, preparation, and vouchers for the world's most valued tech certifications.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white px-8">
+                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg shadow-lg shadow-primary/20">
                        <Link to="/get-started?type=cert">Start Certification Pathway</Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="rounded-full px-8">
-                       Check Partners
+                    <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-10 text-lg border-primary/20 hover:bg-primary/5">
+                       <Link to="/certifications#catalog">Check Partners</Link>
                     </Button>
                  </div>
               </motion.div>
               <div className="relative">
                  <div className="aspect-[4/3] rounded-3xl bg-background border-2 border-border p-8 flex items-center justify-center relative shadow-2xl">
-                    <div className="grid grid-cols-2 gap-8 w-full max-w-md">
-                       {/* Abstract Partner Icons */}
-                       <div className="aspect-square bg-muted flex items-center justify-center rounded-2xl group hover:scale-105 transition-transform"><Award className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" /></div>
-                       <div className="aspect-square bg-muted flex items-center justify-center rounded-2xl group hover:scale-105 transition-transform"><BadgeCheck className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" /></div>
-                       <div className="aspect-square bg-muted flex items-center justify-center rounded-2xl group hover:scale-105 transition-transform"><Cloud className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" /></div>
-                       <div className="aspect-square bg-muted flex items-center justify-center rounded-2xl group hover:scale-105 transition-transform"><ShieldCheck className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" /></div>
-                    </div>
+                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=2071" alt="African Tech Professional" className="w-full h-full object-cover rounded-2xl shadow-xl" />
                     <div className="absolute -top-4 -right-4 bg-primary text-white p-4 rounded-full shadow-lg h-20 w-20 flex items-center justify-center text-center leading-none text-[10px] font-bold uppercase rotate-12">
                        Validated Center
                     </div>
@@ -207,7 +201,7 @@ export function CertificationsPage() {
                    <h2 className="text-3xl md:text-7xl font-heading font-bold mb-8">Ready to Level Up Your Career?</h2>
                    <p className="text-xl opacity-70 mb-12 max-w-2xl mx-auto leading-relaxed italic">The certification you need to unlock the next level of your career is just a preparation away.</p>
                    <div className="flex justify-center">
-                      <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 px-12 h-16 text-lg">
+                      <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-14 px-12 text-lg shadow-xl shadow-black/20 font-bold">
                          <Link to="/get-started?type=cert">Consult with a Career Specialist</Link>
                       </Button>
                    </div>

@@ -106,11 +106,11 @@ export function Web3() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-10 text-lg font-bold shadow-lg shadow-primary/20"
               >
                 <Link to="/web3-advocacy">Explore Web3 Advocacy</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full">
+              <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-primary/20 hover:bg-primary/5">
                 <Link to="/get-started?type=community">Join Our Community</Link>
               </Button>
             </motion.div>
