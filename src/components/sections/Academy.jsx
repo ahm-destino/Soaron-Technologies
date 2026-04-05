@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -249,6 +250,18 @@ export function Academy() {
             </TabsContent>
           ))}
         </Tabs>
+
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5, delay: 0.2 }}
+           className="mt-16 flex justify-center"
+        >
+           <Button asChild size="lg" className="rounded-full px-12 py-7 text-lg shadow-xl shadow-primary/20">
+              <Link to="/academy">Explore All 7 Career Tracks</Link>
+           </Button>
+        </motion.div>
       </div>
     </section>
   );

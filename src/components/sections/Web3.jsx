@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Hexagon, Code2, Users, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ const features = [
     icon: Users,
     title: "Developer Communities",
     description:
-      "Building and nurturing ecosystems like Ethereum Nigeria and Lagos Blockchain Week.",
+      "Building and nurturing ecosystems like Ethereum Nigeria and Filecoin African Hub.",
   },
   {
     icon: Code2,
@@ -82,7 +83,7 @@ export function Web3() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl md:text-5xl font-heading font-bold tracking-tight mb-6"
             >
-              Pioneering the Decentralized Future
+              Pioneering the Decentralized Future for Africa
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -91,9 +92,8 @@ export function Web3() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
             >
-              We are at the forefront of the Web3 revolution in Africa. Through
-              strategic partnerships, developer advocacy, and community
-              building, we empower the next generation of blockchain innovators.
+              We are at the forefront of the Web3 revolution in Africa. We advocate for protocols like Ethereum and Filecoin, 
+              empowering the next generation of African builders to create trustless, scalable solutions.
             </motion.p>
 
             <motion.div
@@ -104,13 +104,14 @@ export function Web3() {
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <Button
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-full"
               >
-                Explore Web3 Solutions
+                <Link to="/web3-advocacy">Explore Web3 Advocacy</Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full">
-                Join Our Community
+              <Button asChild size="lg" variant="outline" className="rounded-full">
+                <Link to="/get-started?type=community">Join Our Community</Link>
               </Button>
             </motion.div>
           </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, PlayCircle } from "lucide-react";
@@ -15,21 +16,25 @@ const slides = [
   {
     image:
       "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=2070",
-    title: "Empowering Your Digital Future",
+    title: "Modern Tech Solutions for the African Firm",
     subtitle:
-      "Comprehensive tech solutions bridging the gap between potential and performance.",
+      "Level up your organization with Google Workspace and data-driven productivity audits.",
     primaryAction: "Explore Solutions",
-    secondaryAction: "Watch Video",
-    badge: "Corporate & Individual",
+    primaryHref: "/corporate-solutions",
+    secondaryAction: "Request Audit",
+    secondaryHref: "/get-started?type=corporate",
+    badge: "Corporate Excellence",
   },
   {
     image:
       "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=2072",
-    title: "Master In-Demand Tech Skills",
+    title: "7 Tracks to a Global Tech Career",
     subtitle:
-      "Join our Tech Academy and transform your career with industry-led training.",
+      "Join our Tech Academy and master High-demand skills with our industry-led curriculum.",
     primaryAction: "Join Academy",
-    secondaryAction: "View Courses",
+    primaryHref: "/academy",
+    secondaryAction: "View Tracks",
+    secondaryHref: "/academy#tracks",
     badge: "Tech Academy",
   },
   {
@@ -37,9 +42,11 @@ const slides = [
       "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&q=80&w=2070",
     title: "Global Certifications & Web3",
     subtitle:
-      "Validate your expertise globally and lead the decentralized revolution.",
+      "Validate your expertise with AWS, Microsoft, and Google credentials or lead the Web3 decentralization.",
     primaryAction: "Get Certified",
-    secondaryAction: "Learn Web3",
+    primaryHref: "/certifications",
+    secondaryAction: "Join Community",
+    secondaryHref: "/web3-advocacy",
     badge: "Global Recognition",
   },
 ];
@@ -134,19 +141,25 @@ export function Hero() {
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <Button
+                      asChild
                       size="lg"
                       className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg rounded-full shadow-lg shadow-primary/20 group"
                     >
-                      {slide.primaryAction}
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      <Link to={slide.primaryHref}>
+                        {slide.primaryAction}
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
                     </Button>
                     <Button
+                      asChild
                       size="lg"
                       variant="outline"
                       className="bg-white/10 hover:bg-white/20 text-white border-white/20 h-14 px-8 text-lg rounded-full backdrop-blur-sm group"
                     >
-                      <PlayCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                      {slide.secondaryAction}
+                      <Link to={slide.secondaryHref}>
+                        {slide.secondaryAction}
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform font-bold" />
+                      </Link>
                     </Button>
                   </motion.div>
                 </div>

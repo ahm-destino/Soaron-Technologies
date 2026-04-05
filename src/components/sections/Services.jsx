@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import {
   Briefcase,
@@ -20,34 +21,34 @@ const services = [
   {
     title: "Corporate Solutions",
     description:
-      "Empower your business with Google Workspace, robust cloud infrastructure, and tailored digital transformation strategies.",
+      "Modernize your workforce with Google Workspace and data-driven productivity audits tailored for African firms.",
     icon: Briefcase,
     color: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
-    link: "#corporate",
+    link: "/corporate-solutions",
   },
   {
     title: "Tech Academy",
     description:
-      "Master high-demand skills in UI/UX, Data Analysis, Cloud Computing, Cybersecurity, and AI with our industry-led curriculum.",
+      "Master high-demand skills in 7 specialized tracks including Data, UI/UX, Cloud, and AI with industry-led training.",
     icon: GraduationCap,
     color: "bg-primary/10 text-primary",
-    link: "#academy",
+    link: "/academy",
   },
   {
     title: "Web3 & Advocacy",
     description:
-      "Join the decentralized revolution. We support blockchain platforms like Ethereum and Filecoin through community initiatives.",
+      "Join the decentralized revolution. We support protocols like Ethereum and Filecoin through African community initiatives.",
     icon: Code,
     color: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
-    link: "#web3",
+    link: "/web3-advocacy",
   },
   {
     title: "Global Certifications",
     description:
-      "Validate your expertise with internationally recognized credentials that open doors to global opportunities.",
+      "Validate your expertise with internationally recognized credentials from AWS, Microsoft, and CompTIA.",
     icon: Globe,
     color: "bg-orange-500/10 text-orange-600 dark:text-orange-400",
-    link: "#certifications",
+    link: "/certifications",
   },
 ];
 
@@ -114,10 +115,13 @@ export function Services() {
                 </CardContent>
                 <CardFooter>
                   <Button
+                    asChild
                     variant="ghost"
                     className="p-0 hover:bg-transparent hover:text-primary group-hover:translate-x-2 transition-transform duration-300"
                   >
-                    Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                    <Link to={service.link}>
+                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

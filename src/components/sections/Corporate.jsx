@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { CheckCircle2, Cloud, Shield, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -54,7 +55,7 @@ export function Corporate() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl md:text-5xl font-heading font-bold tracking-tight mb-6"
             >
-              Transform Your Business with Google Workspace
+              Drive Organizational Productivity with Google Workspace
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -63,9 +64,8 @@ export function Corporate() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
             >
-              As authorized Google Cloud Partners, we provide end-to-end
-              deployment, training, and support for Google Workspace. Elevate
-              your organization's collaboration, security, and productivity.
+              We help banks, insurance firms, and large organizations level up their human capital. 
+              Our productivity audits and Google Workspace training ensure your team is efficient, secure, and ready for the digital age.
             </motion.p>
 
             <motion.div
@@ -76,10 +76,10 @@ export function Corporate() {
               className="space-y-4 mb-10"
             >
               {[
-                "Customized deployment strategies",
-                "Comprehensive admin and user training",
-                "24/7 dedicated technical support",
-                "Security audits and compliance checks",
+                "Productivity Audits for Financial Teams",
+                "Advanced Google Sheets & Data Training",
+                "Enterprise Security & Compliance (NDPA/CBN)",
+                "Workflow Automation with Apps Script",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
@@ -95,10 +95,11 @@ export function Corporate() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Button
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg shadow-primary/20"
               >
-                Get a Free Consultation
+                <Link to="/corporate-solutions">Explore Productivity Solutions</Link>
               </Button>
             </motion.div>
           </div>
