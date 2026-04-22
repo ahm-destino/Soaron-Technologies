@@ -113,7 +113,7 @@ export function Corporate() {
               className="relative z-10"
             >
               <img
-                src="./src/assets/images/LBWD1-172.jpg"
+                src="/images/LBWD1-172.jpg"
                 alt="Nigerian Corporate Team Productivity"
                 className="rounded-3xl shadow-2xl border border-border"
                 referrerPolicy="no-referrer"

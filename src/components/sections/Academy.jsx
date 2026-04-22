@@ -29,7 +29,7 @@ const tracks = [
     description:
       "Master user research, wireframing, prototyping, and visual design using industry-standard tools like Figma.",
     image:
-      "./src/assets/images/ui-ux.jpg",
+      "/images/ui-ux.jpg",
     skills: ["Figma", "User Research", "Prototyping", "Design Systems"],
     duration: "12 Weeks",
     level: "Beginner to Advanced",
@@ -41,7 +41,7 @@ const tracks = [
     description:
       "Learn to extract actionable insights from complex datasets using SQL, Python, Excel, and Power BI.",
     image:
-      "./src/assets/images/data-science.png",
+      "/images/data-science.png",
     skills: ["SQL", "Python", "Power BI", "Data Visualization"],
     duration: "16 Weeks",
     level: "Intermediate",
@@ -53,7 +53,7 @@ const tracks = [
     description:
       "Design, deploy, and manage scalable infrastructure on AWS, Google Cloud, and Azure.",
     image:
-      "./src/assets/images/computer-programmer-software-development-engineer-team-two-african-american-young-people-man-woman-working-together-office-writing-code-computer-sitting-desk_1178410-5025.avif",
+      "/images/computer-programmer-software-development-engineer-team-two-african-american-young-people-man-woman-working-together-office-writing-code-computer-sitting-desk_1178410-5025.avif",
     skills: ["AWS", "GCP", "Docker", "Kubernetes"],
     duration: "20 Weeks",
     level: "Advanced",
@@ -65,7 +65,7 @@ const tracks = [
     description:
       "Protect digital assets, conduct vulnerability assessments, and master ethical hacking techniques.",
     image:
-      "./src/assets/images/cyber-sec.webp",
+      "/images/cyber-sec.webp",
     skills: [
       "Network Security",
       "Ethical Hacking",
@@ -82,7 +82,7 @@ const tracks = [
     description:
       "Build intelligent systems using machine learning, deep learning, and natural language processing.",
     image:
-      "./src/assets/images/Ai image.webp",
+      "/images/Ai image.webp",
     skills: ["Machine Learning", "TensorFlow", "NLP", "Computer Vision"],
     duration: "24 Weeks",
     level: "Advanced",

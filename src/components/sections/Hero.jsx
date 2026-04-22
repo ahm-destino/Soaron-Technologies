@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     image:
-      "./src/assets/images/LBWD1-172.jpg",
+      "/images/LBWD1-172.jpg",
     title: "Modern Tech Solutions for the African Firm",
     subtitle:
       "Level up your organization with modern cloud productivity and data-driven audits.",
@@ -39,7 +39,7 @@ const slides = [
   },
   {
     image:
-      "./src/assets/images/LBWD1-167.jpg",
+      "/images/LBWD1-167.jpg",
     title: "Global Certifications & Web3",
     subtitle:
       "Validate your expertise with AWS, Microsoft, and Google credentials or lead the Web3 decentralization.",
