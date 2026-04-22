@@ -55,7 +55,7 @@ export function SummerCampPopup() {
               className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium mb-4"
             >
               <Sparkles className="w-4 h-4 text-yellow-300" />
-              Summer 2025 Registration Open
+              Summer 2026 Registration Open
             </motion.div>
 
             <motion.h2
@@ -123,7 +123,7 @@ export function SummerCampPopup() {
               className="text-xs text-white/60 mt-4 flex items-center gap-1"
             >
               <Calendar className="w-3 h-3" />
-              Limited spots available • July 15 - August 30, 2025
+              Limited spots available • July 15 - August 30, 2026
             </motion.p>
           </div>
         </motion.div>

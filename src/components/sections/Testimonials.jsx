@@ -18,7 +18,7 @@ const testimonials = [
     content:
       "The Tech Academy was a game-changer. I went from knowing zero Python to landing a junior data analyst role in just 4 months. The curriculum is incredibly practical.",
     image:
-      "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=200",
+      "./src/assets/images/head-shot-home-portrait-young-600nw-2695287745.webp",
     rating: 5,
   },
   {
@@ -27,7 +27,7 @@ const testimonials = [
     content:
       "Their developer advocacy programs and Ethereum community initiatives provided the exact networking and technical deep-dives I needed to advance my blockchain career.",
     image:
-      "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=200",
+      "./src/assets/images/beauty-charisma-head-shot-portrait-600nw-2647728057.webp",
     rating: 5,
   },
 ];

@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070",
+      "./src/assets/images/LBWD1-172.jpg",
     title: "Modern Tech Solutions for the African Firm",
     subtitle:
       "Level up your organization with modern cloud productivity and data-driven audits.",
@@ -39,7 +39,7 @@ const slides = [
   },
   {
     image:
-       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=2074",
+      "./src/assets/images/LBWD1-167.jpg",
     title: "Global Certifications & Web3",
     subtitle:
       "Validate your expertise with AWS, Microsoft, and Google credentials or lead the Web3 decentralization.",
@@ -143,9 +143,9 @@ export function Hero() {
                     <Button
                       asChild
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg rounded-full shadow-lg shadow-primary/20 group"
+                      className="bg-primary hover:bg-primary/90 text-white h-14  px-10 text-lg rounded-full shadow-lg shadow-primary/20 group"
                     >
-                      <Link to={slide.primaryHref}>
+                      <Link to={slide.primaryHref} className="flex items-center">
                         {slide.primaryAction}
                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                       </Link>
@@ -154,9 +154,9 @@ export function Hero() {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="bg-white/10 hover:bg-white/20 text-white border-white/20 h-14 px-8 text-lg rounded-full backdrop-blur-sm group"
+                      className="bg-white/10 hover:bg-white/20 text-white border-white/20 h-14 px-10 text-lg rounded-full backdrop-blur-sm group"
                     >
-                      <Link to={slide.secondaryHref}>
+                      <Link to={slide.secondaryHref} className="flex items-center">
                         {slide.secondaryAction}
                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform font-bold" />
                       </Link>
@@ -174,11 +174,10 @@ export function Hero() {
               <button
                 key={index}
                 onClick={() => api?.scrollTo(index)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-8 bg-primary"
-                    : "w-4 bg-white/30 hover:bg-white/50"
-                }`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${current === index
+                  ? "w-8 bg-primary"
+                  : "w-4 bg-white/30 hover:bg-white/50"
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

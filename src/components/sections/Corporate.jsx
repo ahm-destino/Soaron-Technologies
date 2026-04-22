@@ -64,7 +64,7 @@ export function Corporate() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
             >
-              We help banks, insurance firms, and large organizations level up their human capital. 
+              We help banks, insurance firms, and large organizations level up their human capital.
               Our productivity audits and digital transformation training ensure your team is efficient, secure, and ready for the digital age.
             </motion.p>
 
@@ -113,7 +113,7 @@ export function Corporate() {
               className="relative z-10"
             >
               <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070"
+                src="./src/assets/images/LBWD1-172.jpg"
                 alt="Nigerian Corporate Team Productivity"
                 className="rounded-3xl shadow-2xl border border-border"
                 referrerPolicy="no-referrer"
