@@ -1,8 +1,10 @@
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { 
   Sparkles, Rocket, Gamepad2, Brain, Palette, Music, Video, 
   Code, Star, Calendar, Users, CheckCircle, ArrowRight, 
-  Zap, Trophy, Heart, Lightbulb, GraduationCap, Clock, MapPin
+  Zap, Trophy, Heart, Lightbulb, GraduationCap, Clock, MapPin,
+  Phone, Mail, Send, CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -207,11 +209,11 @@ export function SummerCamp() {
               >
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  April 1st - April 30th
+                  August 4th – Sept 5th
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  Lagos & Online
+                  Soarontech Hub, Iyana Ejigbo, Lagos
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4" />
@@ -507,15 +509,18 @@ export function SummerCamp() {
         </div>
       </section>
 
+      {/* Enrollment Form */}
+      <EnrollmentForm />
+
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white">
+      <section className="py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-heading font-bold mb-6"
+              className="text-4xl md:text-5xl font-heading font-bold mb-4"
             >
               Ready to Give Your Child a Future-Ready Summer?
             </motion.h2>
@@ -526,7 +531,7 @@ export function SummerCamp() {
               transition={{ delay: 0.1 }}
               className="text-xl text-white/90 mb-8"
             >
-              Limited spots available. Early bird pricing ends March 31st.
+              Limited spots available — August 4th to September 5th, 2026.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -535,26 +540,307 @@ export function SummerCamp() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Button
-                size="lg"
-                className="bg-white text-purple-600 hover:bg-white/90 rounded-full px-10 h-16 text-lg font-bold shadow-2xl group"
-              >
-                <Rocket className="mr-2 w-5 h-5 group-hover:animate-bounce" />
-                Enroll Now - 20% Off
-              </Button>
+              <a href="https://wa.me/2347079956918" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-green-400 text-white hover:bg-green-500 rounded-full px-10 h-16 text-lg font-bold shadow-2xl group"
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  WhatsApp Us Now
+                </Button>
+              </a>
+              <a href="tel:08126203069">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/60 text-white bg-transparent hover:bg-white/20 rounded-full px-10 h-16 text-lg"
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  Call Us
+                </Button>
+              </a>
             </motion.div>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-sm text-white/60 mt-6"
+              className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/70"
             >
-              Questions? WhatsApp us: +234 123 456 7890
-            </motion.p>
+              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> 08126203069</span>
+              <span className="hidden sm:block">•</span>
+              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +234 707 995 6918</span>
+              <span className="hidden sm:block">•</span>
+              <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Soarontech Hub, Iyana Ejigbo, Lagos</span>
+            </motion.div>
           </div>
         </div>
       </section>
     </div>
+  );
+}
+
+function EnrollmentForm() {
+  const [formData, setFormData] = useState({
+    parentName: "",
+    childName: "",
+    childAge: "",
+    phone: "",
+    email: "",
+    ageGroup: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [entryTierId, setEntryTierId] = useState(null);
+
+  useEffect(() => {
+    const fetchEvent = async () => {
+      try {
+        const res = await fetch("https://lbw-backend-2026-production.up.railway.app/api/events/ai-summer-bootcamp-2026");
+        const json = await res.json();
+        if (json.success && json.data?.tiers) {
+          const entryTier = json.data.tiers.find(t => t.name.toLowerCase() === "entry");
+          if (entryTier) {
+            setEntryTierId(entryTier._id);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch event tiers", err);
+      }
+    };
+    fetchEvent();
+  }, []);
+
+  const ageGroupOptions = ["Ages 5-8 (Little Explorers)", "Ages 9-12 (Junior Innovators)", "Ages 13-16 (Teen Creators)"];
+
+  const updateField = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!entryTierId) {
+      alert("Registration is temporarily unavailable while we configure the system. Please try again soon.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const payload = {
+        tierId: entryTierId,
+        email: formData.email,
+        name: formData.parentName,
+        quantity: 1,
+        formData: {
+          parent_guardian_name: formData.parentName,
+          child_s_name: formData.childName,
+          child_s_age: String(formData.childAge), // Ensure it's passed as a string or whatever the backend expects
+          age_group: formData.ageGroup,
+          phone_whatsapp: formData.phone,
+          email_address: formData.email
+        }
+      };
+
+      const response = await fetch("https://lbw-backend-2026-production.up.railway.app/api/events/ai-summer-bootcamp-2026/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+
+      if (!data.success) {
+        const errorMsg = data.error?.message;
+        throw new Error(Array.isArray(errorMsg) ? errorMsg.join(", ") : errorMsg || "Registration failed");
+      }
+
+      // Try to initiate payment if required (Step 3)
+      try {
+        const payRes = await fetch(`https://lbw-backend-2026-production.up.railway.app/api/events/ai-summer-bootcamp-2026/registrations/${data.data._id}/pay`, { method: "POST" });
+        const payData = await payRes.json();
+        
+        if (payData.authorizationUrl) {
+          window.location.href = payData.authorizationUrl;
+          return;
+        }
+      } catch (payErr) {
+        console.error("Payment flow skipped or failed", payErr);
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit registration: " + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const isValid = formData.parentName && formData.childName && formData.childAge && formData.phone && formData.ageGroup && formData.email;
+
+  return (
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50" id="enroll">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Rocket className="w-4 h-4" />
+              Enroll Your Child
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              Secure Your Child's <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Spot</span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              Fill in the form below — we'll reach out via WhatsApp to confirm your enrollment.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-4 text-sm text-gray-500">
+              <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-purple-500" /> Aug 4 – Sept 5, 2026</span>
+              <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-purple-500" /> Soarontech Hub, Iyana Ejigbo, Lagos</span>
+            </div>
+          </motion.div>
+
+          {submitted ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-white rounded-3xl shadow-xl p-10 text-center border border-green-100"
+            >
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="w-10 h-10 text-green-500" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Registration Successful! 🎉</h3>
+              <p className="text-gray-600 mb-6">
+                Your child's spot has been successfully reserved. We will send you an email confirmation shortly!
+              </p>
+              <div className="flex gap-3 justify-center">
+                <Button variant="outline" className="rounded-full px-8" onClick={() => {
+                  setSubmitted(false);
+                  setFormData({ parentName: "", childName: "", childAge: "", phone: "", email: "", ageGroup: "" });
+                }}>
+                  Enroll Another Child
+                </Button>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.form
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              onSubmit={handleSubmit}
+              className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100 space-y-6"
+            >
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Parent / Guardian Name *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Mrs. Adeyemi"
+                    value={formData.parentName}
+                    onChange={(e) => updateField("parentName", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Child's Name *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Tunde"
+                    value={formData.childName}
+                    onChange={(e) => updateField("childName", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800"
+                  />
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Child's Age *</label>
+                  <input
+                    type="number"
+                    required
+                    min="5"
+                    max="16"
+                    placeholder="e.g. 10"
+                    value={formData.childAge}
+                    onChange={(e) => updateField("childAge", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Age Group *</label>
+                  <select
+                    required
+                    value={formData.ageGroup}
+                    onChange={(e) => updateField("ageGroup", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800 bg-white"
+                  >
+                    <option value="">Select age group</option>
+                    {ageGroupOptions.map((opt) => (
+                      <option key={opt} value={opt}>{opt}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Phone / WhatsApp *</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="e.g. 08012345678"
+                    value={formData.phone}
+                    onChange={(e) => updateField("phone", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Email Address *</label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="e.g. parent@email.com"
+                    value={formData.email}
+                    onChange={(e) => updateField("email", e.target.value)}
+                    className="w-full h-12 px-4 rounded-xl border-2 border-gray-200 focus:border-purple-500 outline-none transition-colors text-gray-800"
+                  />
+                </div>
+              </div>
+
+              <Button
+                type="submit"
+                disabled={!isValid || loading}
+                className="w-full h-14 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 hover:opacity-90 text-white text-lg font-bold shadow-lg shadow-purple-200 transition-all"
+              >
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-5 h-5 border-2 border-white border-t-transparent rounded-full" />
+                    Sending...
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <Send className="w-5 h-5" />
+                    Complete Registration
+                  </span>
+                )}
+              </Button>
+
+              <p className="text-xs text-gray-400 text-center">
+                Your data is secure. Fields marked * are required to complete the registration.
+              </p>
+            </motion.form>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }

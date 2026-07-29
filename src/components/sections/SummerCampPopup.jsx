@@ -123,7 +123,7 @@ export function SummerCampPopup() {
               className="text-xs text-white/60 mt-4 flex items-center gap-1"
             >
               <Calendar className="w-3 h-3" />
-              Limited spots available • July 15 - August 30, 2026
+              Limited spots available • August 4 – September 5, 2026
             </motion.p>
           </div>
         </motion.div>

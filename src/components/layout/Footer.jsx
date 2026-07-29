@@ -158,15 +158,17 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-muted-foreground">
-                  Lagos, Nigeria
+                  Soarontech Hub, Iyana Ejigbo,
                   <br />
-                  Serving Africa & Middle East
+                  Lagos, Nigeria
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+              <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-muted-foreground">
-                  +234 (0) 123 456 7890
+                  08126203069
+                  <br />
+                  +234 707 995 6918
                 </span>
               </li>
               <li className="flex items-center gap-3">

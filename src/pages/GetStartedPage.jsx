@@ -64,8 +64,9 @@ export function GetStartedPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate API call
-    console.log("Submitting:", formData);
+    const serviceLabel = types.find(t => t.id === formData.type)?.title || formData.type;
+    const msg = `Hello! I'm interested in Soar on Technologies services.%0A%0A*Service:* ${serviceLabel}%0A*Interest:* ${formData.interest}%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A%0A*Message:* ${formData.message || "N/A"}`;
+    window.open(`https://wa.me/2347079956918?text=${msg}`, "_blank");
     setIsSubmitted(true);
   };
 
