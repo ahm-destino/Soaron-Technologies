@@ -16,7 +16,8 @@ import {
   Monitor,
   Cloud,
   FileCode,
-  Users
+  Users,
+  Rocket
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,6 +28,7 @@ const types = [
   { id: "student", title: "Tech Academy", icon: GraduationCap, color: "text-green-600", bg: "bg-green-100" },
   { id: "community", title: "Web3 & Advocacy", icon: Blocks, color: "text-purple-600", bg: "bg-purple-100" },
   { id: "cert", title: "Global Certifications", icon: Award, color: "text-orange-600", bg: "bg-orange-100" },
+  { id: "hackathon", title: "Stripe Sprint Hackathon", icon: Rocket, color: "text-indigo-600", bg: "bg-indigo-100" },
 ];
 
 const subOptions = {
@@ -34,6 +36,7 @@ const subOptions = {
   student: ["Frontend Development", "Backend Development", "UI/UX Design", "Data Analysis", "Cloud Computing", "Cybersecurity", "Artificial Intelligence"],
   community: ["Ethereum Build Circle", "Filecoin Advocacy", "DeFi Research", "Local Hub Meetup"],
   cert: ["AWS Certification Prep", "CompTIA Security+", "Microsoft Azure", "Google Data Engineer"],
+  hackathon: ["Solo Builder / Indie Hacker", "Founder / Product Lead", "Frontend / Fullstack Developer", "Backend & Payments Engineer", "UI/UX Product Designer"],
 };
 
 export function GetStartedPage() {
@@ -115,7 +118,7 @@ export function GetStartedPage() {
                     <p className="text-lg text-muted-foreground mb-10 max-w-md mx-auto">
                       Thank you for your interest in Soar on Technologies. A specialist from our {types.find(t => t.id === formData.type)?.title} team will reach out to you within 24 hours.
                     </p>
-                    <Button asChild size="lg" className="rounded-full px-12">
+                    <Button asChild size="lg" className="rounded-full h-11 px-8 text-sm font-semibold">
                        <Link to="/">Explore more</Link>
                     </Button>
                   </motion.div>
@@ -167,11 +170,11 @@ export function GetStartedPage() {
                            ))}
                         </div>
                         <div className="flex items-center gap-4 mt-12">
-                           <Button variant="ghost" onClick={handleBack} className="rounded-full"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
+                           <Button variant="ghost" onClick={handleBack} className="rounded-full h-11 px-5 text-sm font-medium"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
                            <Button 
                              disabled={!formData.interest} 
                              onClick={handleNext} 
-                             className="rounded-full px-10 h-12 bg-primary text-white"
+                             className="rounded-full px-7 h-11 text-sm font-semibold bg-primary text-white"
                            >
                               Next Step <ChevronRight className="w-4 h-4 ml-2" />
                            </Button>
@@ -222,11 +225,11 @@ export function GetStartedPage() {
                            </div>
                         </div>
                         <div className="flex items-center gap-4 mt-12">
-                           <Button variant="ghost" onClick={handleBack} className="rounded-full"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
+                           <Button variant="ghost" onClick={handleBack} className="rounded-full h-11 px-5 text-sm font-medium"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
                            <Button 
                              disabled={!formData.name || !formData.email || !formData.phone} 
                              onClick={handleNext} 
-                             className="rounded-full px-10 h-12 bg-primary text-white"
+                             className="rounded-full px-7 h-11 text-sm font-semibold bg-primary text-white"
                            >
                               Next Step <ChevronRight className="w-4 h-4 ml-2" />
                            </Button>
@@ -251,10 +254,10 @@ export function GetStartedPage() {
                            />
                         </div>
                         <div className="flex items-center gap-4 mt-12">
-                           <Button variant="ghost" onClick={handleBack} className="rounded-full"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
+                           <Button variant="ghost" onClick={handleBack} className="rounded-full h-11 px-5 text-sm font-medium"><ChevronLeft className="w-4 h-4 mr-2" /> Back</Button>
                            <Button 
                              onClick={handleSubmit} 
-                             className="rounded-full px-12 h-14 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/20"
+                             className="rounded-full px-8 h-12 bg-primary text-white text-base font-semibold shadow-lg shadow-primary/20"
                            >
                               Complete Flow <ChevronRight className="w-4 h-4 ml-2" />
                            </Button>

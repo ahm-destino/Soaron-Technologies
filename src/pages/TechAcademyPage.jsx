@@ -141,10 +141,15 @@ export function TechAcademyPage() {
                   Join Africa's most intensive, project-driven academy. We provide the mentorship, the tools, and the path to a high-growth career in tech.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 h-14 px-10 text-lg shadow-xl shadow-black/10">
+                  <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold shadow-xl shadow-black/10">
                     <Link to="/get-started?type=student">Apply Now</Link>
                   </Button>
-                  <Button variant="outline" size="lg" className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 h-14 px-10 text-lg">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold cursor-pointer"
+                    onClick={() => document.getElementById("tracks")?.scrollIntoView({ behavior: "smooth" })}
+                  >
                     View Catalog
                   </Button>
                 </div>
@@ -180,7 +185,7 @@ export function TechAcademyPage() {
         </section>
 
         {/* Tracks Catalog */}
-        <section className="py-24 bg-muted/50">
+        <section id="tracks" className="py-24 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-2xl">
@@ -292,7 +297,7 @@ export function TechAcademyPage() {
                  <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Ready to go Global?</h2>
                  <p className="text-white/70 text-lg">We offer exam preparation and vouchers for international certifications from AWS, Google, and Microsoft.</p>
               </div>
-              <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-12 px-10">
+              <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-12 px-7 text-base font-semibold shadow-md">
                  <Link to="/certifications">View Certifications</Link>
               </Button>
            </div>

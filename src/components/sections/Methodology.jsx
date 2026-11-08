@@ -34,7 +34,7 @@ const steps = [
 
 export function Methodology() {
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
+    <section id="about" className="py-24 bg-card relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]" />

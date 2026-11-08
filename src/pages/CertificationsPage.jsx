@@ -105,10 +105,10 @@ export function CertificationsPage() {
                     Don't just claim your skills—prove them. Soar on Technologies provides the training, preparation, and vouchers for the world's most valued tech certifications.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg shadow-lg shadow-primary/20">
+                    <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold shadow-lg shadow-primary/20">
                        <Link to="/get-started?type=cert">Start Certification Pathway</Link>
                     </Button>
-                    <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-10 text-lg border-primary/20 hover:bg-primary/5">
+                    <Button asChild variant="outline" size="lg" className="rounded-full h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold border-primary/20 hover:bg-primary/5">
                        <Link to="/certifications#catalog">Check Partners</Link>
                     </Button>
                  </div>
@@ -150,7 +150,7 @@ export function CertificationsPage() {
         </section>
 
         {/* List of Certs */}
-        <section className="py-24 bg-muted/20">
+        <section id="catalog" className="py-24 bg-muted/20">
            <div className="container mx-auto px-4 md:px-6">
               <div className="text-center max-w-3xl mx-auto mb-16">
                  <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Our Supported Credentials</h2>
@@ -201,7 +201,7 @@ export function CertificationsPage() {
                    <h2 className="text-3xl md:text-7xl font-heading font-bold mb-8">Ready to Level Up Your Career?</h2>
                    <p className="text-xl opacity-70 mb-12 max-w-2xl mx-auto leading-relaxed italic">The certification you need to unlock the next level of your career is just a preparation away.</p>
                    <div className="flex justify-center">
-                      <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-14 px-12 text-lg shadow-xl shadow-black/20 font-bold">
+                      <Button asChild size="lg" className="rounded-full bg-primary text-white border-0 hover:bg-primary/90 h-12 sm:h-13 px-8 text-base font-semibold shadow-xl shadow-black/20">
                          <Link to="/get-started?type=cert">Consult with a Career Specialist</Link>
                       </Button>
                    </div>
