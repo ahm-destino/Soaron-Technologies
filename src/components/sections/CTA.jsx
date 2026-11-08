@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,18 +41,22 @@ export function CTA() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
+                asChild
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg rounded-full shadow-xl group"
+                className="bg-white text-primary hover:bg-white/90 h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold rounded-full shadow-xl group"
               >
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Link to="/get-started?type=corporate">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-white/30 text-white hover:bg-white/10 h-14 px-8 text-lg rounded-full backdrop-blur-sm"
+                className="bg-transparent border-white/30 text-white hover:bg-white/10 h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold rounded-full backdrop-blur-sm"
               >
-                Explore Academy
+                <Link to="/academy">Explore Academy</Link>
               </Button>
             </motion.div>
           </div>

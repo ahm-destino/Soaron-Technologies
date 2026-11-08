@@ -3,6 +3,19 @@ import { motion } from "motion/react";
 import { Hexagon, Code2, Users, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+function StripeIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.839 3.771 6.491 6.861 7.607 2.533.913 3.415 1.53 3.415 2.471 0 .997-.872 1.545-2.105 1.545-1.897 0-4.607-.946-6.581-2.07l-.907 5.503C6.183 23.36 9.162 24 12.181 24c2.583 0 4.707-.633 6.223-1.83 1.574-1.242 2.39-3.075 2.39-5.372 0-5.006-3.83-6.626-6.818-7.648z" />
+    </svg>
+  );
+}
+
 const features = [
   {
     icon: Network,
@@ -72,9 +85,20 @@ export function Web3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6"
+              className="flex flex-wrap items-center gap-2 mb-6"
             >
-              Web3 & Developer Advocacy
+              <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                Web3 & Developer Advocacy
+              </span>
+              <Link
+                to="/web3-advocacy#hackathon"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-3 py-1 text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 transition-colors"
+              >
+                <div className="w-4 h-4 rounded-sm bg-[#635BFF] flex items-center justify-center text-white shrink-0 shadow-sm">
+                  <StripeIcon className="w-2.5 h-2.5" />
+                </div>
+                <span>Stripe Sprint Hackathon</span> &rarr;
+              </Link>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -106,12 +130,12 @@ export function Web3() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-10 text-lg font-bold shadow-lg shadow-primary/20"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-8 text-lg font-bold shadow-lg shadow-primary/20"
               >
                 <Link to="/web3-advocacy">Explore Web3 Advocacy</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-primary/20 hover:bg-primary/5">
-                <Link to="/get-started?type=community">Join Our Community</Link>
+              <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg border-indigo-500/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/10">
+                <Link to="/web3-advocacy#hackathon">Stripe Hackathon</Link>
               </Button>
             </motion.div>
           </div>

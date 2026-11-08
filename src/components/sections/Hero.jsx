@@ -143,22 +143,22 @@ export function Hero() {
                     <Button
                       asChild
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 text-white h-14  px-10 text-lg rounded-full shadow-lg shadow-primary/20 group"
+                      className="bg-primary hover:bg-primary/90 text-white h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold rounded-full shadow-lg shadow-primary/20 group"
                     >
-                      <Link to={slide.primaryHref} className="flex items-center">
+                      <Link to={slide.primaryHref}>
                         {slide.primaryAction}
-                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
                     <Button
                       asChild
                       size="lg"
                       variant="outline"
-                      className="bg-white/10 hover:bg-white/20 text-white border-white/20 h-14 px-10 text-lg rounded-full backdrop-blur-sm group"
+                      className="bg-white/10 hover:bg-white/20 text-white border-white/20 h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold rounded-full backdrop-blur-sm group"
                     >
-                      <Link to={slide.secondaryHref} className="flex items-center">
+                      <Link to={slide.secondaryHref}>
                         {slide.secondaryAction}
-                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform font-bold" />
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
                   </motion.div>

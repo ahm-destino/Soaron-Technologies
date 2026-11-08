@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Sparkles, Rocket, Gamepad2, Brain, Palette, Music, Video, Code, Star, Calendar, Users, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,13 +7,14 @@ import { Button } from "@/components/ui/button";
 export function SummerCampPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isOpen) return null;
+  if (!isOpen || location.pathname === "/summer-camp") return null;
 
   return (
     <AnimatePresence>
@@ -97,7 +98,7 @@ export function SummerCampPopup() {
             >
               <Button
                 size="lg"
-                className="bg-white text-purple-600 hover:bg-white/90 rounded-full font-bold shadow-lg group"
+                className="bg-white text-purple-600 hover:bg-white/90 rounded-full font-bold shadow-lg group h-11 px-6 text-sm sm:text-base"
                 onClick={() => {
                   navigate("/summer-camp");
                   setIsOpen(false);
@@ -109,7 +110,7 @@ export function SummerCampPopup() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/50 text-white hover:bg-white/20 rounded-full bg-transparent"
+                className="border-white/50 text-white hover:bg-white/20 rounded-full bg-transparent h-11 px-6 text-sm sm:text-base"
                 onClick={() => setIsOpen(false)}
               >
                 Maybe Later

@@ -97,7 +97,7 @@ export function Corporate() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-10 text-lg shadow-lg shadow-primary/20 font-bold"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full h-12 sm:h-13 px-7 sm:px-8 text-base font-semibold shadow-lg shadow-primary/20"
               >
                 <Link to="/corporate-solutions">Explore Productivity Solutions</Link>
               </Button>

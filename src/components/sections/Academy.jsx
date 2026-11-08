@@ -218,19 +218,19 @@ export function Academy() {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                         <Button
-                          size="lg"
-                          className="bg-primary hover:bg-primary/90 text-white rounded-full h-12 px-8"
+                          asChild
+                          className="bg-primary hover:bg-primary/90 text-white rounded-full h-11 px-6 text-sm font-semibold shadow-md"
                         >
-                          Enroll Now
+                          <Link to="/get-started?type=student">Enroll Now</Link>
                         </Button>
                         <Button
-                          size="lg"
+                          asChild
                           variant="outline"
-                          className="rounded-full h-12 px-8"
+                          className="rounded-full h-11 px-6 text-sm font-semibold"
                         >
-                          Download Syllabus
+                          <Link to="/academy">Explore Curriculum</Link>
                         </Button>
                       </div>
                     </div>
@@ -258,7 +258,7 @@ export function Academy() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-16 flex justify-center"
         >
-          <Button asChild size="lg" className="rounded-full h-14 px-12 text-lg shadow-xl shadow-primary/20 font-bold">
+          <Button asChild size="lg" className="rounded-full h-12 sm:h-13 px-8 text-base font-semibold shadow-xl shadow-primary/20">
             <Link to="/academy">Explore All 7 Career Tracks</Link>
           </Button>
         </motion.div>

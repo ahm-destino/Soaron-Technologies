@@ -187,7 +187,8 @@ export function SummerCamp() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-yellow-400 to-pink-500 text-white hover:opacity-90 rounded-full px-8 h-14 text-lg font-bold shadow-2xl shadow-yellow-500/25 group"
+                  className="bg-gradient-to-r from-yellow-400 to-pink-500 text-white hover:opacity-90 rounded-full px-7 sm:px-8 h-12 sm:h-13 text-base font-semibold shadow-2xl shadow-yellow-500/25 group cursor-pointer"
+                  onClick={() => document.getElementById("enroll")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   <Rocket className="mr-2 w-5 h-5 group-hover:animate-bounce" />
                   Enroll Your Child
@@ -195,9 +196,10 @@ export function SummerCamp() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/50 bg-transparent text-white hover:bg-white/20 rounded-full px-8 h-14 text-lg"
+                  className="border-white/50 bg-transparent text-white hover:bg-white/20 rounded-full px-7 sm:px-8 h-12 sm:h-13 text-base font-semibold cursor-pointer"
+                  onClick={() => document.getElementById("enroll")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  Watch Video
+                  View Details
                 </Button>
               </motion.div>
 
@@ -543,7 +545,7 @@ export function SummerCamp() {
               <a href="https://wa.me/2347079956918" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-green-400 text-white hover:bg-green-500 rounded-full px-10 h-16 text-lg font-bold shadow-2xl group"
+                  className="bg-green-400 text-white hover:bg-green-500 rounded-full px-7 sm:px-8 h-12 sm:h-13 text-base font-semibold shadow-2xl group"
                 >
                   <Phone className="mr-2 w-5 h-5" />
                   WhatsApp Us Now
@@ -553,7 +555,7 @@ export function SummerCamp() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/60 text-white bg-transparent hover:bg-white/20 rounded-full px-10 h-16 text-lg"
+                  className="border-white/60 text-white bg-transparent hover:bg-white/20 rounded-full px-7 sm:px-8 h-12 sm:h-13 text-base font-semibold"
                 >
                   <Phone className="mr-2 w-5 h-5" />
                   Call Us
@@ -819,7 +821,7 @@ function EnrollmentForm() {
               <Button
                 type="submit"
                 disabled={!isValid || loading}
-                className="w-full h-14 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 hover:opacity-90 text-white text-lg font-bold shadow-lg shadow-purple-200 transition-all"
+                className="w-full h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 hover:opacity-90 text-white text-base font-bold shadow-lg shadow-purple-200 transition-all"
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
