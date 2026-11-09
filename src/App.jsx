@@ -12,7 +12,6 @@ import { Web3AdvocacyPage } from "./pages/Web3AdvocacyPage";
 import { CertificationsPage } from "./pages/CertificationsPage";
 import { GetStartedPage } from "./pages/GetStartedPage";
 import { AboutPage } from "./pages/AboutPage";
-import { SummerCampPopup } from "./components/sections/SummerCampPopup";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
 
 export default function App() {
@@ -20,7 +19,6 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-background font-sans selection:bg-primary/30">
-        <SummerCampPopup />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
